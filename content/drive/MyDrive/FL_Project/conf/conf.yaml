@@ -1,0 +1,67 @@
+augmentation_params:
+  brightness_range: null
+  channel_shift_range: 0.0
+  cval: 0.0
+  featurewise_center: false
+  featurewise_std_normalization: false
+  fill_mode: nearest
+  height_shift_range: 0.0
+  horizontal_flip: false
+  interpolation_order: 1
+  rescale: null
+  rotation_range: 0
+  samplewise_center: false
+  samplewise_std_normalization: false
+  shear_range: 0.0
+  vertical_flip: false
+  width_shift_range: 0.0
+  zca_epsilon: 6.0e-06
+  zca_whitening: false
+  zoom_range: 0.0
+data_params:
+  augment_test_data: false
+  augment_training_data: true
+  data_split_ratio: 0.1
+  plot_distributions: false
+  plot_sampled_images: false
+  random_state: 42
+fl_params:
+  iterations: 1
+  num_clients: 4
+  num_edge_servers: 2
+  to_evaluate_client_model_index: 0
+model_params:
+  backbone_model_name: EfficientNetB3
+  class_count: 2
+  dense_units: 256
+  dropout_rate: 0.45
+  epsilon: 0.001
+  freeze_base_model: false
+  img_shape:
+    channels: 3
+    height: 224
+    width: 224
+  l1_regularizer: 0.006
+  l2_regularizer: 0.016
+  learning_rate: 1.0e-05
+  momentum: 0.95
+tabular_mode:
+  dataset: Lukeima
+  input_shape: null
+training_params:
+  balance_class_weights: true
+  batch_size: 16
+  global_epochs: 1
+  local_model_epochs: 1
+  loss: categorical_crossentropy
+  metrics:
+  - accuracy
+  - keras_precision
+  - keras_recall
+  - keras_f1_score
+  optimizer: Adamax
+  patience: 2
+xai_params:
+  backbone_model_layer_name: resnet50
+  layer_id: -1
+  layer_name: top_conv

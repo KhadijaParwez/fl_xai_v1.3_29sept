@@ -1,0 +1,11 @@
+version: '3.8'
+services:
+  lukemia-notebook:
+    build: .
+    container_name: lukemia_project
+    ports:
+      - "8888:8888"
+    volumes:
+      # Mount your project directory to the main path
+      - /Volumes/mydata/projects/lukemia:/Volumes/mydata/projects/lukemia
+    restart: unless-stopped
