@@ -198,15 +198,9 @@ sudo chown -R $USER:$USER .
 
 ## 📄 License
 
-[Add your license information here]
+MIT License
 
-## 🤝 Contributing
-
-[Add contribution guidelines here]
-
-## 📞 Support
-
-[Add support/contact information here]
+Copyright (c) 2025 KhadijaParwez
 
 ---
 
